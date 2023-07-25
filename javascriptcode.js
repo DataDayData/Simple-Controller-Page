@@ -5,24 +5,7 @@ rec1.style.position = "absolute";
 rec1.style.left = "400px";
 rec1.style.top = "15px";
 
-// Send the button name to the PHP script when the button is clicked
-rec1.addEventListener("click", function() {
-  console.log("Button clicked!");
-   var buttonName = "buttonName=forward";
- var xhr = new XMLHttpRequest();
 
-  xhr.open("POST", "connect.php", true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-  xhr.onreadystatechange = function () {
-      if (xhr.readyState == XMLHttpRequest.DONE) {
-          console.log(xhr.responseText);
-      }
-  };
-
-
-  xhr.send(buttonName);
-});
 
 // Save the button's original border color
 var rec1BorderColor = rec1.style.borderColor;
